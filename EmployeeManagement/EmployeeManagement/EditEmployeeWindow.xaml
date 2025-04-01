@@ -1,0 +1,22 @@
+﻿<Window x:Class="EmployeeManagement.EditEmployeeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Редактирование сотрудника" Height="200" Width="300">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="ФИО:" Grid.Row="0" />
+        <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1"/>
+
+        <TextBlock Text="Должность:" Grid.Row="2" Margin="0,10,0,0"/>
+        <TextBox Text="{Binding Position, UpdateSourceTrigger=PropertyChanged}" Grid.Row="3"/>
+
+        <Button Content="Сохранить" Grid.Row="4" Margin="0,10,0,0" Click="Save_Click"/>
+    </Grid>
+</Window>
+
